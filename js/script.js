@@ -79,18 +79,24 @@ form.onsubmit = (e) => {
     breed.value
   );
 
-  const namePet = document.createElement("span");
-  namePet.value = petName.value;
-  const nameOwner = document.createElement("span");
-  nameOwner.value = ownerName.value;
-  const petSpecies = document.createElement("span");
-  petSpecies.value = species.value;
-  const petBreed = document.createElement("span");
-  petBreed.value = breed.value;
-
-  p;
-
   petsArr.push(pet);
+
+  const singlePet = document.createElement("div");
+  singlePet.setAttribute("id", "singlePet");
+  const namePet = document.createElement("span");
+  namePet.innerText = "Pet name: " + petName.value;
+  const nameOwner = document.createElement("span");
+  nameOwner.innerText = "Owner: " + ownerName.value;
+  const petSpecies = document.createElement("span");
+  petSpecies.innerText = "Pet species: " + species.value;
+  const petBreed = document.createElement("span");
+  petBreed.innerText = "Pet breed: " + breed.value;
+
+  singlePet.appendChild(namePet);
+  singlePet.appendChild(nameOwner);
+  singlePet.appendChild(petSpecies);
+  singlePet.appendChild(petBreed);
+  petsList.appendChild(singlePet);
 
   petName.value = "";
   ownerName.value = "";
