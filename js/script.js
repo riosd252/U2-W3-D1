@@ -1,3 +1,5 @@
+// Esercizio #1
+
 class User {
   constructor(name, lastName, age, location) {
     this.name = name;
@@ -41,6 +43,8 @@ const user4 = new User("Luca", "Utzeri", 22, "Latium");
 
 console.log(User.isOlder(user1, user2));
 console.log(User.isOlder(user4, user3));
+
+// Esercizio #2
 
 class Pet {
   constructor(petName, ownerName, species, breed) {
